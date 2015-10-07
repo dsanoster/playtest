@@ -15,3 +15,7 @@ libraryDependencies ++= Seq(
 // Play provides two styles of routers, one expects its actions to be injected, the
 // other, legacy style, accesses its actions statically.
 routesGenerator := InjectedRoutesGenerator
+
+import com.typesafe.sbteclipse.plugin.EclipsePlugin.EclipseKeys
+EclipseKeys.createSrc := EclipseCreateSrc.Default + EclipseCreateSrc.Resource
+EclipseKeys.projectFlavor := EclipseProjectFlavor.Java
